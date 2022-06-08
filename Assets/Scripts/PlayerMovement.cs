@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private float playerSpeed = 5.0f;
-    private float jumpSpeed = 300.0f;
+    private float jumpSpeed = 9f;
+    private Boolean grounded = true;
     private float jumps = 0;
     private float jumpMax = 1;
     private LayerMask groundMask;
@@ -28,11 +29,25 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
-        if (Input.GetButtonUp("Jump") && jumps < jumpMax)
+        if (Input.GetButton("Horizontal"))
         {
-            jumps++;
-            Jump();
+            am.SetBool("Walking",true);
+            float axis = Input.GetAxis("Horizontal");
+            if (axis < 0) sr.flipX = true; else sr.flipX = false;
+            transform.Translate( axis * Vector2.right * playerSpeed * Time.deltaTime);
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        else {
+            am.SetBool("Walking",false);
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            am.SetBool("Jumping",true);
+            if ( grounded )
+            {
+                jumps++;
+                Jump();
+            }
         }
         Ground();
     }
@@ -54,19 +69,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        am.SetTrigger("Jump");
-        playerRB.AddForce(new Vector2(0, jumpSpeed));
+        playerRB.AddForce(new Vector2(0, jumpSpeed),ForceMode2D.Impulse);
     }
 
     private void Ground()
     {
-        var groundCheck = Physics2D.Raycast(transform.position, Vector2.down, 0.4f, groundMask);
+        var groundCheck = Physics2D.Raycast(transform.position, Vector2.down, 1.0f, groundMask);
         if (groundCheck.collider.gameObject != null)
         {
             if (groundCheck.collider.CompareTag("Ground")) {
                 jumps = 0;
-                am.ResetTrigger("Jump");
+                grounded = true;
+                am.SetBool("Jumping",false);
             }
-        }
+            else grounded = false;
+        } else grounded = false;
     }
 }
