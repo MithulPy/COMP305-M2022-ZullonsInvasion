@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Spikes
   - Gems
+  - Spaceship
   layers:
   - Default
   - TransparentFX

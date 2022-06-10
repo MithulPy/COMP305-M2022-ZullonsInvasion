@@ -71,9 +71,15 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Gems")
         {
             Scoring.totalScore += 1;
-            Debug.Log("Got Gem");
             scoreText.text = "Score: " + Scoring.totalScore;
             collision.gameObject.SetActive(false);
+        }
+
+
+        if (collision.tag == "Spaceship")
+        {
+            SceneManager.LoadScene("StartMenu");
+
         }
     }
 
