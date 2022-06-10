@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        camAnim.SetTrigger("shake");
+        //camAnim.SetTrigger("shake");
         Instantiate(explosion, transform.position, Quaternion.identity);
         health -= damage;
     }
