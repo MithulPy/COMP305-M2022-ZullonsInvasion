@@ -370,6 +370,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19cbcb9bd3b5d0947b931d11c50a60ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 5
+  jumpSpeed: 9
+  grounded: 1
+  groundCheckRadius: 1.15
+  jumps: 0
+  jumpMax: 1
 --- !u!114 &151966047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28150,7 +28156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 461769017145904546, guid: 7f1148e91bf870f40b82e0c8f975a633, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 120.47
+      value: 122.45
       objectReference: {fileID: 0}
     - target: {fileID: 461769017145904546, guid: 7f1148e91bf870f40b82e0c8f975a633, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28191,6 +28197,14 @@ PrefabInstance:
     - target: {fileID: 2456490358910089626, guid: 7f1148e91bf870f40b82e0c8f975a633, type: 3}
       propertyPath: m_Name
       value: Trampoline
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735404863465600560, guid: 7f1148e91bf870f40b82e0c8f975a633, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735404863465600560, guid: 7f1148e91bf870f40b82e0c8f975a633, type: 3}
+      propertyPath: RestartTimer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f1148e91bf870f40b82e0c8f975a633, type: 3}
