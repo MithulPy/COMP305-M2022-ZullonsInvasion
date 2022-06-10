@@ -26,6 +26,8 @@ public class Projectile : MonoBehaviour
             if (hitInfo.collider.CompareTag("Enemy"))
             {
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+                GameManager.score += 20;
+                Debug.Log(GameManager.score);
             }
             DestroyProjectile();
         }
@@ -38,5 +40,10 @@ public class Projectile : MonoBehaviour
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+  
+         
+
     }
+
+
 }
