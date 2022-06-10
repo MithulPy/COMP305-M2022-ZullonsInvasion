@@ -67,28 +67,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "FallDetector")
-        {
-            transform.position = respawnPoint;
-        }
-        else if (collision.tag == "Checkpoint")
-        {
-            respawnPoint = transform.position;
-        }
-        else if (collision.tag == "NextLevel")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            // Can also use SceneManager.LoadScene(1); to load a specific scene
-            respawnPoint = transform.position;
-        }
-        else if (collision.tag == "PreviousLevel")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            respawnPoint = transform.position;
-        }
-        else if (collision.tag == "Crystal")
+
+        if (collision.tag == "Gems")
         {
             Scoring.totalScore += 1;
+            Debug.Log("Got Gem");
             scoreText.text = "Score: " + Scoring.totalScore;
             collision.gameObject.SetActive(false);
         }
@@ -96,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Spike")
+        if (collision.tag == "Spikes")
         {
             healthBar.Damage(0.002f);
         }
