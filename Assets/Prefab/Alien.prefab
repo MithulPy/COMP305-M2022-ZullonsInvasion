@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7795072374254457203}
   - component: {fileID: 2738219835987259396}
   - component: {fileID: 1801083617082234732}
+  - component: {fileID: 8096326271252339148}
   m_Layer: 8
   m_Name: Alien_idle_0
   m_TagString: Enemy
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4724866932671068296}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 10.25, y: -3.11, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8791874272682495115}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &7795072374254457203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -128,6 +129,26 @@ MonoBehaviour:
   health: 1
   deathEffect: {fileID: 1110264763428426, guid: 443a8ba800c81734c8f77d26b1b07fdf, type: 3}
   explosion: {fileID: 1682124166123736, guid: 844796abb46e53b4484cb9b765192e80, type: 3}
+--- !u!95 &8096326271252339148
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724866932671068296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ee87de98a09f31143b3a6e81868bc074, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6789532358206398452
 GameObject:
   m_ObjectHideFlags: 0
