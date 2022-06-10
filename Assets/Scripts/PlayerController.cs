@@ -81,6 +81,13 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("StartMenu");
 
         }
+        if (collision.tag == "FallDetector")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.score = 0;
+            Health.totalHealth = 1f;
+
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

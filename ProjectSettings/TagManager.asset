@@ -9,6 +9,7 @@ TagManager:
   - Spikes
   - Gems
   - Spaceship
+  - FallDetector
   layers:
   - Default
   - TransparentFX
