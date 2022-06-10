@@ -26,6 +26,7 @@ public class HealthBar : MonoBehaviour
         {
             Health.totalHealth = 0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene("YouDied");
             GameManager.score = 0;
             Health.totalHealth = 1f;
 
