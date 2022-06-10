@@ -2,10 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     private float playerSpeed = 5.0f;
     private float jumpSpeed = 9f;
     private Boolean grounded = true;
@@ -77,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
         var groundCheck = Physics2D.Raycast(transform.position, Vector2.down, 1.0f, groundMask);
         if (groundCheck.collider.gameObject != null)
         {
+            Debug.Log("Not Null");
+
             if (groundCheck.collider.CompareTag("Ground")) {
                 jumps = 0;
                 grounded = true;
@@ -85,4 +87,6 @@ public class PlayerMovement : MonoBehaviour
             else grounded = false;
         } else grounded = false;
     }
+
+
 }
