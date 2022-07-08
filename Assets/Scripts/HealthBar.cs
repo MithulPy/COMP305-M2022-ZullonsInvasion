@@ -30,6 +30,7 @@ public class HealthBar : MonoBehaviour
             GameManager.score = 0;
             Health.totalHealth = 1f;
 
+
         }
         SetSize(Health.totalHealth);
     }
