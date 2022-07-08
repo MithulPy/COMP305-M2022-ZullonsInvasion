@@ -78,7 +78,12 @@ public class PlayerController : MonoBehaviour
 
         if (collision.tag == "Spaceship")
         {
-            SceneManager.LoadScene("StartMenu");
+            SceneManager.LoadScene("Level2");
+
+        }
+        if (collision.tag == "Gate")
+        {
+            SceneManager.LoadScene("Level3");
 
         }
         if (collision.tag == "FallDetector")
