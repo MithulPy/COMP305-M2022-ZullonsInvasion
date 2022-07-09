@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     {
         //GameObject.Find("Score").GetComponent<TextMeshProUGUI>().SetText(score.ToString());
         scoreText.text = "Score: " + score.ToString();
-        BeginGame();
+        //BeginGame();
     }
 
     void Update()
@@ -27,6 +27,6 @@ public class GameManager : MonoBehaviour
 
     public void BeginGame()
     {
-        TimerController.instance.BeginTimer();
+        //TimerController.instance.BeginTimer();
     }
 }
