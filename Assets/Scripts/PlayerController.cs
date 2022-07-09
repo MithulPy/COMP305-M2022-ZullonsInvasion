@@ -78,18 +78,25 @@ public class PlayerController : MonoBehaviour
 
         if (collision.tag == "Spaceship")
         {
+            Health.totalHealth = 1f;
             SceneManager.LoadScene("Level2");
 
         }
         if (collision.tag == "Gate")
         {
+            Health.totalHealth = 1f;
             SceneManager.LoadScene("Level3");
+
+        }
+        if (collision.tag == "Queen")
+        {
+            Health.totalHealth = 1f;
+            SceneManager.LoadScene("YouWin");
 
         }
         if (collision.tag == "FallDetector")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            GameManager.score = 0;
+            SceneManager.LoadScene("GameOver");
             Health.totalHealth = 1f;
 
         }

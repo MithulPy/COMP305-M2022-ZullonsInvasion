@@ -10,6 +10,8 @@ TagManager:
   - Gems
   - Spaceship
   - FallDetector
+  - Gate
+  - Queen
   layers:
   - Default
   - TransparentFX
