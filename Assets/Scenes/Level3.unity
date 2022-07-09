@@ -1047,9 +1047,10 @@ GameObject:
   - component: {fileID: 403863818}
   - component: {fileID: 403863817}
   - component: {fileID: 403863819}
+  - component: {fileID: 403863820}
   m_Layer: 0
   m_Name: Queen
-  m_TagString: Untagged
+  m_TagString: Queen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1141,6 +1142,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &403863820
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403863816}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.11, y: 0.17}
+    newSize: {x: 0.11, y: 0.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.11, y: 0.17}
+  m_EdgeRadius: 0
 --- !u!1 &447021186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1841,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -445676066320335788, guid: deae17d4df40efa44a9db380cd707a19, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3041379825384304133, guid: deae17d4df40efa44a9db380cd707a19, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1942,6 +1973,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -445676066320335788, guid: deae17d4df40efa44a9db380cd707a19, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3041379825384304133, guid: deae17d4df40efa44a9db380cd707a19, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2135,6 +2170,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -445676066320335788, guid: deae17d4df40efa44a9db380cd707a19, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3041379825384304133, guid: deae17d4df40efa44a9db380cd707a19, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2763,11 +2802,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3343965440530824224, guid: c2078d654a6462347850e518ccd51cbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -123.99
+      value: -120.55
       objectReference: {fileID: 0}
     - target: {fileID: 3343965440530824224, guid: c2078d654a6462347850e518ccd51cbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 3343965440530824224, guid: c2078d654a6462347850e518ccd51cbc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21126,11 +21165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3343965440530824224, guid: c2078d654a6462347850e518ccd51cbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -136.28
+      value: -136.16
       objectReference: {fileID: 0}
     - target: {fileID: 3343965440530824224, guid: c2078d654a6462347850e518ccd51cbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: 11.63
       objectReference: {fileID: 0}
     - target: {fileID: 3343965440530824224, guid: c2078d654a6462347850e518ccd51cbc, type: 3}
       propertyPath: m_LocalPosition.z
