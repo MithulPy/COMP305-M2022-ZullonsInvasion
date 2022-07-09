@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Main Menu");
         SceneManager.LoadScene("StartMenu");
+        GameManager.score = 0;
     }
 
     public void Level1()
