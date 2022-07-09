@@ -13,20 +13,11 @@ public class GameManager : MonoBehaviour
     {
         //GameObject.Find("Score").GetComponent<TextMeshProUGUI>().SetText(score.ToString());
         scoreText.text = "Score: " + score.ToString();
-        BeginGame();
     }
 
     void Update()
     {
-
         //GameObject.Find("Score").GetComponent<TextMeshProUGUI>().SetText(score.ToString());
         scoreText.text = "Score: " + score.ToString();
-        //BeginGame();
-
-    }
-
-    public void BeginGame()
-    {
-        TimerController.instance.BeginTimer();
     }
 }
