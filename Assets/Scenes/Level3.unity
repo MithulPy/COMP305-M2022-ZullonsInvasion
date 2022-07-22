@@ -1618,7 +1618,7 @@ GameObject:
   - component: {fileID: 707936201}
   - component: {fileID: 707936203}
   - component: {fileID: 707936202}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 973840227}
   - component: {fileID: 973840229}
   - component: {fileID: 973840228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2592,7 +2592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074398324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3255,7 +3255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286342018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shot Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
