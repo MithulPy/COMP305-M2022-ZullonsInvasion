@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
             Health.totalHealth = 1f;
             SceneManager.LoadScene("Level2");
 
-        }
+    }
         if (collision.tag == "Gate")
         {
             Health.totalHealth = 1f;
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
         }
         if (collision.tag == "Queen")
-        {
+    {
             Health.totalHealth = 1f;
             SceneManager.LoadScene("YouWin");
 
@@ -108,5 +108,10 @@ public class PlayerController : MonoBehaviour
         {
             healthBar.Damage(0.02f);
         }
+    }
+
+    public void TakeDamage( float damage )
+    {
+        healthBar.Damage(damage);
     }
 }
