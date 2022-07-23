@@ -45,4 +45,10 @@ public class MainMenu : MonoBehaviour
         GameManager.score = 0;
         SceneManager.LoadScene("Level3");
     }
+
+    public void Options()
+    {
+        Debug.Log("OptionsMenu");
+        SceneManager.LoadScene("OptionsMenu");
+    }
 }
