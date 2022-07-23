@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.tag == "Spikes")
         {
-            healthBar.Damage(0.02f);
+            healthBar.Damage(0.002f);
         }
     }
 
