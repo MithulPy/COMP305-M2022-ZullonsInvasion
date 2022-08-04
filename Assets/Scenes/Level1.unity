@@ -29221,10 +29221,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 278329175502020765, guid: ad001899b9900cc4c9a5df5aad2444de, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278329175502020766, guid: ad001899b9900cc4c9a5df5aad2444de, type: 3}
+      propertyPath: hurt
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 278329175502020766, guid: ad001899b9900cc4c9a5df5aad2444de, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 119997697}
+    - target: {fileID: 278329175502020766, guid: ad001899b9900cc4c9a5df5aad2444de, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad001899b9900cc4c9a5df5aad2444de, type: 3}
 --- !u!1001 &541471619189401718

@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public Text scoreText;
     public HealthBar healthBar;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         playerAnimation = GetComponent<Animator>();
         respawnPoint = transform.position;
         scoreText.text = "Score: " + Scoring.totalScore;
+        
     }
 
     // Update is called once per frame
@@ -100,6 +101,7 @@ public class PlayerController : MonoBehaviour
             Health.totalHealth = 1f;
 
         }
+       
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -107,11 +109,13 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Spikes")
         {
             healthBar.Damage(0.002f);
+            
         }
     }
 
     public void TakeDamage( float damage )
     {
         healthBar.Damage(damage);
+        
     }
 }

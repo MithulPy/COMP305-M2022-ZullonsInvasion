@@ -12,10 +12,11 @@ public class EnemyProjectile : MonoBehaviour
     public LayerMask whatIsSolid;
 
     public GameObject destroyEffect;
-
+   
     private void Start()
     {
         Invoke("DestroyProjectile", lifeTime);
+        
     }
 
     private void Update()
@@ -26,8 +27,10 @@ public class EnemyProjectile : MonoBehaviour
             if (hitInfo.collider.CompareTag("Player"))
             {
                 hitInfo.collider.GetComponent<PlayerController>().TakeDamage(damage);
+                
             }
             DestroyProjectile();
+
         }
 
 
