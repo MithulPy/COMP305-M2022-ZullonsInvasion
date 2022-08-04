@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
 
     public float offset;
-
+    
     public GameObject projectile;
     public GameObject shotEffect;
     public Transform shotPoint;
@@ -14,7 +14,13 @@ public class Weapon : MonoBehaviour
 
     private float timeBtwShots;
     public float startTimeBtwShots;
-    [SerializeField] private AudioSource gunSoundEffect;
+    
+    private AudioSource gunSoundEffect;
+
+    private void Start()
+    {
+        gunSoundEffect = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         // Handles the weapon rotation
@@ -26,18 +32,22 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                gunSoundEffect.Play();
+                
                 Instantiate(shotEffect, shotPoint.position, Quaternion.identity);
                 //camAnim.SetTrigger("shake");
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
+                gunSoundEffect.Play();
             }
+            
         }
+
         else
         {
             timeBtwShots -= Time.deltaTime;
-        }
 
+        }
+        
 
     }
 }

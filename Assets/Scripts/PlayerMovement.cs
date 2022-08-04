@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator am;
     private SpriteRenderer sr;
     AudioSource jumpsound;
-
+    AudioSource gunSoundEffect;
     // Start is called before the first frame update
     void Start()
     {

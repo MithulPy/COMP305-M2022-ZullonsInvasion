@@ -13,13 +13,13 @@ public class Enemy : MonoBehaviour
     private LayerMask mask;
     public GameObject enemyProjectile, player;
     public Vector3 playerPos;
-
+    AudioSource enemyShoot;
     private void Start()
     {
         InvokeRepeating("Reload",1,1);
         mask = LayerMask.GetMask("GroundLayer")|LayerMask.GetMask("Player");
         player = GameObject.Find("Player Sprite");
-        
+        enemyShoot = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -61,6 +61,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Fire");
         GameObject newBullet = Instantiate(enemyProjectile, transform.position, Quaternion.LookRotation(direction));
         newBullet.transform.up = direction;
+        enemyShoot.Play();
     }
 
     void Reload()
