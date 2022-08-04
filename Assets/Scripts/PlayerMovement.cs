@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRB;
     private Animator am;
     private SpriteRenderer sr;
+    AudioSource jumpsound;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         groundMask = LayerMask.GetMask("GroundLayer");
         am = gameObject.GetComponent<Animator>();
         sr = gameObject.GetComponent<SpriteRenderer>();
+        jumpsound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         // Jumping
         if (Input.GetButtonUp("Jump"))
         {
+            jumpsound.Play();
             am.SetBool("Jumping",true);
             if ( grounded ) playerRB.AddForce(new Vector2(0, jumpSpeed),ForceMode2D.Impulse);
         }
