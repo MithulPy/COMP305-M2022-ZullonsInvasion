@@ -101,7 +101,8 @@ public class PlayerController : MonoBehaviour
             Health.totalHealth = 1f;
 
         }
-       
+
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
