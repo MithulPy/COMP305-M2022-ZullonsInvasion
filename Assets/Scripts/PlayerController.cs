@@ -112,7 +112,25 @@ public class PlayerController : MonoBehaviour
             healthBar.Damage(0.002f);
             
         }
-        if (collision.tag == "Health")
+        if (collision.tag == "Health1")
+        {
+            if (Health.totalHealth < 1f)
+            {
+
+                healthBar.Damage(-0.02f);
+                Destroy(collision.gameObject);
+            }
+        }
+        if (collision.tag == "Health2")
+        {
+            if (Health.totalHealth < 1f)
+            {
+
+                healthBar.Damage(-0.02f);
+                Destroy(collision.gameObject);
+            }
+        }
+        if (collision.tag == "Health3")
         {
             if (Health.totalHealth < 1f)
             {

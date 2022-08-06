@@ -12,7 +12,9 @@ TagManager:
   - FallDetector
   - Gate
   - Queen
-  - Health
+  - Health2
+  - Health3
+  - Health1
   layers:
   - Default
   - TransparentFX
