@@ -34,6 +34,15 @@ public class HealthBar : MonoBehaviour
         SetSize(Health.totalHealth);
     }
 
+    public void GainHP(float hp)
+    {
+        if (Health.totalHealth < 1f)
+        {
+            Health.totalHealth += hp;
+        }
+        SetSize(Health.totalHealth);
+    }
+
     public void SetSize(float size)
     {
         bar.localScale = new Vector3(size, 1f);
