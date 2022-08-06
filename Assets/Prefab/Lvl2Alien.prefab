@@ -177,6 +177,9 @@ MonoBehaviour:
   enemyProjectile: {fileID: 1927733496957370, guid: ee2092e8ea02c2743a355ffca4e1de3d, type: 3}
   player: {fileID: 0}
   playerPos: {x: 0, y: 0, z: 0}
+  speed: 1.5
+  positions: []
+  index: 0
 --- !u!82 &-1666741103299397677
 AudioSource:
   m_ObjectHideFlags: 0

@@ -14,11 +14,16 @@ public class Enemy : MonoBehaviour
     public GameObject enemyProjectile, player;
     public Vector3 playerPos;
     AudioSource enemyShoot;
+    public float speed;
+    public Vector3[] positions;
+    public int index;
+    private SpriteRenderer sr;
     private void Start()
     {
         InvokeRepeating("Reload",1,1);
         mask = LayerMask.GetMask("GroundLayer")|LayerMask.GetMask("Player");
         player = GameObject.Find("Player Sprite");
+        sr = GetComponent<SpriteRenderer>();
         enemyShoot = GetComponent<AudioSource>();
     }
 
@@ -26,6 +31,8 @@ public class Enemy : MonoBehaviour
     {
         // playerPos = player.transform.GetChild(0).position;
         playerPos = player.transform.position;
+        if (( playerPos - transform.position ).x > 0 ) sr.flipX = true;
+        else sr.flipX = false;
         if (health <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -36,6 +43,17 @@ public class Enemy : MonoBehaviour
             Fire();
             cooldown = cooldownMax;
         }
+
+        if ( positions.Length > 0 )
+        {
+            transform.localPosition = Vector2.MoveTowards(transform.localPosition,positions[index],speed*Time.deltaTime);
+            if ( transform.localPosition == positions[index])
+            {
+                if ( index == positions.Length - 1 ) index = 0;
+                else index++;
+            }
+        }
+        
     }
 
     public void TakeDamage(int damage)
@@ -58,7 +76,6 @@ public class Enemy : MonoBehaviour
                 // GameObject newBullet = Instantiate(enemyProjectile, transform.position,Quaternion.identity);
             }
         }
-        Debug.Log("Fire");
         GameObject newBullet = Instantiate(enemyProjectile, transform.position, Quaternion.LookRotation(direction));
         newBullet.transform.up = direction;
         enemyShoot.Play();
